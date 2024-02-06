@@ -9,9 +9,7 @@ def index():
 @app.route('/predict')
 def predict():
     prediction = str(predict())
-    print(prediction)
     linearr = str(linear())
-    print(linearr)
     logist = str(logistic()) 
     
     return jsonify({'prediction': prediction, 'linear': linearr, 'logistic': logist })
