@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ML Model Prediction</title>
-    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Prédiction avec le modèle Titanic</h1>
-    <button id="predictButton">Faire une prédiction</button>
+    <h1>Prédiction de survie sur le Titanic</h1>
+    <form id="predictionForm">
+        <input type="number" name="Pclass" placeholder="Passenger Class (1, 2, 3)" required>
+        <input type="text" name="Sex" placeholder="Sex (male, female)" required>
+        <input type="number" name="Age" placeholder="Age" required>
+        <input type="number" name="SibSp" placeholder="Siblings/Spouses Aboard" required>
+        <input type="number" name="Parch" placeholder="Parents/Children Aboard" required>
+        <input type="number" name="Fare" placeholder="Ticket Fare" required>
+        <input type="text" name="Embarked" placeholder="Embarked (C, Q, S)" required>
+        <button type="button" id="predictButton">Predict</button>
+    </form>
     <div id="predictionResult"></div>
 
     <script src="/static/script.js"></script>
