@@ -4,12 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import LabelEncoder
-url = 'https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv'
-df = pd.read_csv(url)
-
-# Afficher les premières lignes du dataframe pour vérification
-print(df.head())
-
+df = pd.read_csv('titanic.csv') 
 # 2. Prétraitement des données
 # Gestion des valeurs manquantes pour l'âge et le port d'embarquement
 imputer = SimpleImputer(strategy='mean')
