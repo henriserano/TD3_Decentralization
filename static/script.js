@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-document.getElementById("predictButton").addEventListener("click", function() {
-    fetch('/predict')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("predictionResult").innerHTML = "Résultat de prédiction: " + data.prediction + " Résultat linear : "+data.linear + "Résultat logistic : "+data.logist;
-        })
-        .catch(error => {
-            console.error('Erreur lors de la récupération des prédictions:', error);
-            document.getElementById("predictionResult").innerHTML = "Erreur lors de la récupération des prédictions.";
-        });
-});
-=======
+
 document.getElementById('predictButton').addEventListener('click', function() {
     const formData = new FormData(document.getElementById('predictionForm'));
     const data = {};
@@ -35,4 +23,3 @@ document.getElementById('predictButton').addEventListener('click', function() {
         console.error('Error:', error);
     });
 });
->>>>>>> 300156c55ecc11f6961fb5d753a9288985a3b4a5
