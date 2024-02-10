@@ -15,12 +15,13 @@ def convert_numpy(obj):
 
 
 @app.route('/')
-def index():
+def home():
     return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
+    print("Data : ",data)
     algo = data.pop('algo', None)  # Extrait l'algo choisi et retire 'algo' des données
     
     if algo == 'ml':
@@ -39,5 +40,5 @@ def predict():
     
     return jsonify({'result': convert_numpy(result)})
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
